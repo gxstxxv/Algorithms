@@ -14,13 +14,13 @@ func main() {
 	fmt.Scan(&i)
 
 	start := time.Now()
-	b := binarySearch(a, i)
+	b := BinarySearch(a, i)
 	elapsed := time.Since(start)
 	fmt.Println(b)
 	fmt.Println(elapsed)
 }
 
-func binarySearch(d []int, v int) bool {
+func BinarySearch(d []int, v int) bool {
 	if len(d) == 0 {
 		return false
 	}
@@ -32,8 +32,8 @@ func binarySearch(d []int, v int) bool {
 	}
 
 	if v < d[m] {
-		return binarySearch(d[:m], v)
+		return BinarySearch(d[:m], v)
 	} else {
-		return binarySearch(d[m+1:], v)
+		return BinarySearch(d[m+1:], v)
 	}
 }
