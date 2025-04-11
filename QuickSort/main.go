@@ -9,15 +9,16 @@ import (
 
 func main() {
 	a := rand.Perm(40000)
+
 	start := time.Now()
-	Quicksort(a)
+	QuickSort(a)
 	elapsed := time.Since(start)
 
 	fmt.Println(sort.IntsAreSorted(a))
 	fmt.Println(elapsed)
 }
 
-func Quicksort(a []int) {
+func QuickSort(a []int) {
 	quicksort(a, 0, len(a)-1)
 }
 
