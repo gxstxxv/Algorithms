@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	a := rand.Perm(40000)
+	a := rand.Perm(200000)
 
 	start := time.Now()
 	a = MergeSort(a)
