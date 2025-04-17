@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	a := rand.Perm(40000)
+	a := rand.Perm(50000000)
 
 	start := time.Now()
 	QuickSort(a)
